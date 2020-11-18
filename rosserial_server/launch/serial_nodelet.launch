@@ -1,0 +1,11 @@
+<launch>
+  <arg name="port" default="/dev/ttyACM0" />
+  <arg name="baud" default="57600" />
+
+  <node pkg="nodelet" type="nodelet" name="rosserial_nodelet_manager" args="manager" cwd="node" output="screen"/>
+
+  <node pkg="nodelet" type="nodelet" name="rosserial_server_nodelet" args="load rosserial_server/SerialNodelet rosserial_nodelet_manager">
+    <param name="port" value="$(arg port)"/>
+    <param name="baud" value="$(arg baud)"/>
+  </node>
+</launch>

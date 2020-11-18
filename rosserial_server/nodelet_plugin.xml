@@ -1,0 +1,9 @@
+<library path="lib/librosserial_server_nodelet">
+  <class name="rosserial_server/SerialNodelet"
+    type="rosserial_server::SerialNodelet"
+    base_class_type="nodelet::Nodelet">
+  <description>
+  This is the rosserial server nodelet.
+  </description>
+  </class>
+</library>
